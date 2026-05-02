@@ -6,7 +6,8 @@
         { title: '生财有迹', url: 'https://github.com/nicejade/wealth-tracker' },
         { title: '个人主页', url: 'https://github.com/nicejade/homepage' },
         { title: '倾城之链', url: 'https://github.com/nicejade/nicelinks-vue-client' },
-        { title: '曼妙句子', url: 'https://github.com/nicejade/read.lovejade.cn' }
+        { title: '曼妙句子', url: 'https://github.com/nicejade/read.lovejade.cn' },
+        { title: '人生已过', url: 'https://github.com/nicejade/life-spent' },
       ]
     },
     {
@@ -14,6 +15,7 @@
       branch: [
         { title: '逍遥自在轩', url: 'https://www.niceshare.site' },
         { title: '晚晴幽草轩', url: 'https://www.jeffjade.com/' },
+        { title: '慧悟万象阁', url: 'https://meta.niceshare.site/zh' },
         { title: '缘知随心庭', url: 'https://fine.niceshare.site/' },
         { title: '玉桃文飨轩', url: 'https://share.lovejade.cn/' }
       ]
