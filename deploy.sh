@@ -3,6 +3,9 @@
 # Exit on the first failure.
 set -e
 
+# Update word index
+node scripts/update-word-index.js
+
 # Build the full release bundle.
 npm run build:release
 
