@@ -187,23 +187,23 @@ curl -X POST "${TYPESENSE_ORIGIN}/keys" \
   -d '{"description":"GPT Wordbook public search","actions":["documents:search"],"collections":["docs"]}'
 ```
 
-Cloudflare Pages 需要配置这些环境变量：
+Cloudflare Pages 需要配置这些环境变量（下例域名为占位示例，请替换为你自己的线上站点与 Typesense 服务地址）：
 
 ```bash
-PUBLIC_SITE_URL=https://word.lovejade.cn
+PUBLIC_SITE_URL=https://your-site.example.com
 TYPESENSE_COLLECTION_NAME=docs
 TYPESENSE_USE_PROXY=true
 TYPESENSE_PROXY_PATH=/typesense
-TYPESENSE_ORIGIN=https://typesense.yuxuanda.cn
+TYPESENSE_ORIGIN=https://your-typesense.example.com
 TYPESENSE_SEARCH_API_KEY=<search-only key>
-TYPESENSE_PROXY_ALLOWED_ORIGINS=https://word.lovejade.cn
+TYPESENSE_PROXY_ALLOWED_ORIGINS=https://your-site.example.com
 ```
 
 本地如需直连 Typesense，可在 `.env` 中配置：
 
 ```bash
 TYPESENSE_USE_PROXY=false
-TYPESENSE_NODE_URL=https://typesense.yuxuanda.cn
+TYPESENSE_NODE_URL=https://your-typesense.example.com
 TYPESENSE_SEARCH_API_KEY=<search-only key>
 ```
 
