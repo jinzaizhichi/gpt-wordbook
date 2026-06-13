@@ -161,6 +161,10 @@ h3 {
   transform: scale(1.02);
 }
 
+.DocSearch-Button {
+  margin-right: 50px;
+}
+
 /* 侧边栏优化 - 参照 AlphabetIndex 风格 */
 #starlight__sidebar {
   padding-top: 1rem;
