@@ -30,9 +30,13 @@ const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '/index.
     }
 
     /* 搜索按钮在左，菜单按钮在右 */
-    site-search,
-    [aria-controls="starlight__sidebar"] {
+    site-search {
       @apply flex visible opacity-100 w-8 h-8 justify-center items-center fixed top-[0.7rem] z-[1000] bg-white rounded-full border-0 shadow-[0_8px_4px_hsla(0,0%,0%,0.01),0_5px_2px_hsla(0,0%,0%,0.03),0_3px_2px_hsla(0,0%,0%,0.06),0_1px_1px_hsla(0,0%,0%,0.06)];
+    }
+
+    starlight-menu-button,
+    [aria-controls="starlight__sidebar"] {
+      @apply flex visible opacity-100 w-8 h-8 justify-center items-center fixed top-[0.7rem] z-[1000] bg-transparent rounded-full border-0 shadow-none;
     }
 
     starlight-menu-button,
@@ -46,7 +50,11 @@ const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '/index.
     }
 
     starlight-menu-button button {
-      @apply flex w-full h-full p-0 border-0 bg-transparent cursor-pointer justify-center items-center text-[#1d1d1f];
+      @apply flex w-full h-full p-0 border-0 bg-transparent shadow-none cursor-pointer justify-center items-center text-[#1d1d1f];
+    }
+
+    starlight-menu-button[aria-expanded="true"] button {
+      @apply bg-transparent shadow-none;
     }
 
     site-search svg,
@@ -54,10 +62,10 @@ const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '/index.
       @apply block w-[1.4rem] h-[1.4rem] text-[#1d1d1f] fill-current;
     }
 
-    /* 精确控制切换图标：根据状态显示或隐藏 */
-    starlight-menu-button button[aria-expanded="false"] .close-menu,
-    starlight-menu-button button[aria-expanded="true"] .open-menu {
-      @apply hidden;
+    /* 精确控制切换图标：aria-expanded 在 starlight-menu-button 上，而非内部 button */
+    starlight-menu-button[aria-expanded="true"] button .open-menu,
+    starlight-menu-button:not([aria-expanded="true"]) button .close-menu {
+      display: none;
     }
 
     /* 移动端隐藏可能冲突的元素 */
@@ -122,10 +130,7 @@ const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '/index.
         }
 
         /* Dark mode button styles */
-        html[data-theme='dark'] site-search,
-        html[data-theme='dark'] starlight-menu-button,
-        html[data-theme='dark'] .mobile-menu-toggle,
-        html[data-theme='dark'] [aria-controls="starlight__sidebar"] {
+        html[data-theme='dark'] site-search {
           background-color: #2c2c2e;
         }
 

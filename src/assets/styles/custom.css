@@ -161,7 +161,7 @@ h3 {
   transform: scale(1.02);
 }
 
-.DocSearch-Button {
+.page .header .DocSearch-Button {
   margin-right: 50px;
 }
 
