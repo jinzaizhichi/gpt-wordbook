@@ -1,0 +1,98 @@
+---
+title: 智析单词书 | GPT Wordbook - AI 赋能的深度词汇学习平台
+description: 智析单词书（GPT Wordbook）是 AI 驱动的深度英语词汇学习平台，精选 11000+ 核心词汇，利用 GPT 模型深度解析每个单词的词义、发音、例句、词根、词缀、同义词、反义词、文化内涵与使用场景，从理解本质出发构建长期记忆。
+template: splash
+hero:
+  tagline: 用 AI 的智慧重塑单词学习 · 让记忆从死记硬背到逻辑构建
+  image:
+    alt: 智析单词书 - 智能单词学习平台
+    file: https://word.lovejade.cn/hero.jpeg
+  actions:
+    - text: 开始探索词汇
+      link: /words-index/a/
+      icon: right-arrow
+      variant: primary
+    - text: 了解更多
+      link: /about
+      icon: information
+      variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+import AlphabetIndex from "../../components/AlphabetIndex.astro";
+
+<section class="w-full text-center mt-0! px-0 not-prose">
+  <div class="max-w-[900px] mx-auto py-8 px-5 md:px-8 lg:px-10 rounded-[1.25rem] md:rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-300 [:root[data-theme='light']_&]:bg-black/[0.01] [:root[data-theme='light']_&]:border-black/[0.04] [:root[data-theme='light']_&]:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.05),0_4px_6px_-2px_rgba(0,0,0,0.02),inset_0_1px_0_rgba(255,255,255,0.5)]">
+    <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.1] !my-6 tracking-tighter bg-clip-text text-transparent bg-gradient-to-br from-[var(--sl-color-text-accent)] to-[#434343] font-sans">
+      AI 赋能的深度词汇学习平台
+    </h2>
+    <p class="text-[clamp(1rem,3vw,1.4rem)] leading-relaxed text-[var(--sl-color-gray-3)] max-w-[700px] mx-auto font-normal tracking-tight font-sans">
+      精选{" "}
+      <strong class="text-[var(--sl-color-text-accent)] font-semibold text-[1.15em] inline-block transition-transform duration-200 hover:scale-105">
+        11000+
+      </strong>{" "}
+      核心词汇，利用 GPT
+      模型深度解析词义、词根、词缀与文化内涵，从理解本质出发构建长期记忆。
+    </p>
+  </div>
+</section>
+
+<div class="mt-16! md:mt-20! lg:mt-20! px-0">
+  <h3 class="text-center !my-6 !md:my-8 !lg:my-8 text-[clamp(1.25rem,4vw,1.5rem)] text-[var(--sl-color-gray-2)] font-semibold tracking-tight border-none">
+    快速开始：按首字母索引
+  </h3>
+  <AlphabetIndex />
+</div>
+
+<div class="px-0 mt-16! md:mt-20! lg:mt-20! [&_.card]:!p-10 [&_.card]:md:!p-8 [&_.card]:!mt-0 [&_.card]:transition-all [&_.card]:duration-300 [&_.card]:bg-white/[0.02] [&_.card]:!border-white/[0.08] [&_.card]:rounded-[1.25rem] [&_.card]:backdrop-blur-md [&_.card]:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06),inset_0_1px_1px_rgba(255,255,255,0.05)] [&_.card]:hover:-translate-y-0.5 [:root[data-theme='light']_&_.card]:!bg-black/[0.01] [:root[data-theme='light']_&_.card]:!border-black/[0.04] [:root[data-theme='light']_&_.card]:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.05),0_4px_6px_-2px_rgba(0,0,0,0.02),inset_0_1px_0_rgba(255,255,255,0.5)]">
+  <CardGrid stagger>
+    <Card title="🤖 AI 智能驱动">
+      基于 **GPT**
+      生成高质量词汇解析内容，专业且富有洞察力，每个单词都包含深度的语言学分析
+    </Card>
+
+    <Card title="🎯 系统化学习">
+      通过**词根词缀逻辑**梳理，帮助你建立完整的词汇网络，理解单词构成规律，举一反三
+    </Card>
+
+    <Card title="📚 海量词库">
+      **11000+** 精选核心词汇，覆盖考研、托福、雅思、GRE、四六级等各类考试和应用场景
+    </Card>
+
+    <Card title="💡 趣味记忆">
+      AI 生成生动有趣的**助记故事**，结合文化背景和趣闻轶事，让单词记忆充满乐趣
+    </Card>
+
+    <Card title="⚡ 极速体验">
+      基于 **Astro** 构建的静态网站，加载速度极快，响应式设计完美支持所有设备
+    </Card>
+
+    <Card title="🔗 智能关联">
+      智能关联相关词汇，构建**词汇网络**，通过联想和对比强化记忆效果
+    </Card>
+
+  </CardGrid>
+</div>
+
+<section class="w-full text-center mt-16! md:mt-20! lg:mt-20! px-6 py-16 bg-white/[0.03] border border-white/[0.08] rounded-3xl backdrop-blur-md [:root[data-theme='light']_&]:bg-black/[0.02] [:root[data-theme='light']_&]:border-black/[0.05] mb-16 md:mb-16 lg:mb-20">
+  <h3 class="text-[clamp(1.5rem,5vw,2.25rem)] font-bold !mt-0 border-none text-white text-center tracking-tight">
+    为进阶英语学习者打造
+  </h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 max-w-[1100px] mx-auto">
+    {[
+      { title: "🎓 考试备考者", desc: "考研、托福、雅思、GRE" },
+      { title: "💼 职场人士", desc: "提升专业英语和职场应用能力" },
+      { title: "🌟 英语爱好者", desc: "深度学习语言文化内涵" },
+      { title: "👨‍🏫 教育工作者", desc: "获取优质的教学资源和素材" },
+    ].map((item) => (
+      <div class="bg-white/[0.02] mt-0! border border-white/[0.08] rounded-2xl p-6 md:p-7 lg:p-8 text-left transition-all duration-300 hover:-translate-y-0.5 hover:border-white/15 hover:shadow-xl [:root[data-theme='light']_&]:bg-black/[0.01] [:root[data-theme='light']_&]:border-black/[0.04] hover:shadow-[0_8px_16px_-4px_rgba(0,0,0,0.2)] [:root[data-theme='light']_&:hover]:border-black/[0.12] [:root[data-theme='light']_&:hover]:shadow-[0_8px_16px_-4px_rgba(0,0,0,0.08)]">
+        <strong class="block mb-2.5 text-[var(--sl-color-accent)] text-lg md:text-xl font-semibold tracking-tight">
+          {item.title}
+        </strong>
+        <span class="text-[clamp(0.9375rem,2.5vw,1rem)] text-[var(--sl-color-gray-3)] leading-relaxed block">
+          {item.desc}
+        </span>
+      </div>
+    ))}
+  </div>
+</section>
